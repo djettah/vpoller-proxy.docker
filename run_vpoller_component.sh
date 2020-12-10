@@ -102,15 +102,18 @@ else
     /import-hostsfile.sh
 fi
 
-if [ ! -z ${VPOLLER_VC_HOST_1} ]; then
-        echo vconnector-cli --debug -H ${VPOLLER_VC_HOST_1} -U ${VPOLLER_VC_USERNAME_1} -P ${VPOLLER_VC_PASSWORD_1} add
-        echo vconnector-cli --debug -H ${VPOLLER_VC_HOST_1} enable
+if [ ! -z ${VPOLLER_VC_HOST_01} ]; then
+    vconnector-cli --debug -H ${VPOLLER_VC_HOST_01} -U ${VPOLLER_VC_USERNAME_01} -P ${VPOLLER_VC_PASSWORD_01} add
+    vconnector-cli --debug -H ${VPOLLER_VC_HOST_01} enable
 fi
-if [ ! -z ${VPOLLER_VC_HOST_2} ]; then
-        echo vconnector-cli --debug -H ${VPOLLER_VC_HOST_2} -U ${VPOLLER_VC_USERNAME_2} -P ${VPOLLER_VC_PASSWORD_2} add
-        echo vconnector-cli --debug -H ${VPOLLER_VC_HOST_2} enable
+if [ ! -z ${VPOLLER_VC_HOST_02} ]; then
+    vconnector-cli --debug -H ${VPOLLER_VC_HOST_02} -U ${VPOLLER_VC_USERNAME_02} -P ${VPOLLER_VC_PASSWORD_02} add
+    vconnector-cli --debug -H ${VPOLLER_VC_HOST_02} enable
 fi
-
+if [ ! -z ${VPOLLER_VC_HOST_03} ]; then
+    vconnector-cli --debug -H ${VPOLLER_VC_HOST_03} -U ${VPOLLER_VC_USERNAME_03} -P ${VPOLLER_VC_PASSWORD_03} add
+    vconnector-cli --debug -H ${VPOLLER_VC_HOST_03} enable
+fi
 vconnector-cli --debug get
 
 echo "########################################################"
